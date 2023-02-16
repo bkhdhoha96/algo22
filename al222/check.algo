@@ -1,0 +1,25 @@
+ALGORITHM cards 
+VAR
+    A,B : INTEGER type;//B cards A hand cards
+    n = length(A);
+    m = length(B);
+    i,j,m,n: INTEGER;
+BEGIN
+ Bmin:=B[0];
+ for i from 1 to m-1 do
+ IF (B[i]< Bmin ) THEN
+    Bmin=B[i];
+ END_IF
+A[0]=B[0];
+FOR i FROM 1 TO n-1 STEP 1  DO
+       j = i
+       B[i]=A[j]
+       while j > 0 and A[j-1] > A[j] do
+           swapin(B[j], A[j-1])
+       end while
+END_FOR
+
+
+
+
+
